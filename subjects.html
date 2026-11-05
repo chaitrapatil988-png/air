@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0a">
+  <meta name="description" content="Explore hands-on Stackly learning subjects.">
+  <title>Subjects — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page" data-dashboard-page="subjects"><div class="site-loader" id="siteLoader" role="status" aria-label="Loading Stackly Studio"><img src="stackly-logo-lime.webp" alt="Stackly"><span class="site-loader-spinner" aria-hidden="true"></span><span class="site-loader-label">LOADING STACKLY</span></div>
+  <header class="dashboard-header"><div class="wrap dashboard-nav">
+    <a class="brand" href="index.html" aria-label="Stackly home"><img class="stackly-logo" src="stackly-logo-lime.webp" alt="Stackly"></a>
+    <div class="dashboard-user"><span class="dashboard-role-pill" id="dashboardRole">Workspace</span><span class="dashboard-email" id="dashboardEmail"></span><span class="dashboard-avatar" id="dashboardAvatar">S</span><button id="logoutButton" type="button">Log out <span>↗</span></button></div>
+  </div></header>
+  <div class="wrap dashboard-layout">
+    <aside class="dashboard-sidebar"><span class="dashboard-sidebar-label">WORKSPACE</span><nav aria-label="Dashboard navigation">
+      <a href="dashboard.html"><span>◫</span>Overview</a>
+      <a href="my-workspace.html"><span>▤</span>My workspace</a>
+      <a class="active" href="subjects.html"><span>⌘</span>Subjects</a>
+      <a href="support.html"><span>↗</span>Help & support</a>
+    </nav><div class="dashboard-sidebar-bottom"><span class="dashboard-status-dot"></span><span>STACKLY PREVIEW</span></div></aside>
+    <main class="dashboard-main subjects-page-main">
+      <section class="dashboard-welcome"><div><div class="eyebrow" id="dashboardEyebrow">EXPLORE STACKLY</div><h1 id="dashboardTitle">Find a subject that sparks your curiosity.</h1><p id="dashboardSubtitle">Choose a path and build something useful with what you learn.</p></div><a class="button dashboard-welcome-action" id="dashboardAction" href="contact.html">Ask about classes <span>↗</span></a></section>
+      <section class="subjects-page-hero"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?fm=webp&fit=crop&w=700&q=40" alt="Creative community collaborating in a studio"><div><span class="tag">PRACTICAL LEARNING, MADE PERSONAL</span><h2>Small classes.<br>Skills you can use.</h2><p>Explore hands-on subjects shaped around real practice, thoughtful feedback, and the work you want to do.</p></div></section>
+      <section class="dashboard-explore subjects-page-explore" id="subjects"><div class="dashboard-section-heading"><div><div class="eyebrow" id="subjectsEyebrow">Browse subjects</div><h2 id="subjectsTitle">Choose where you want to begin.</h2></div></div><p class="dashboard-explore-intro" id="subjectsIntro">Explore practical classes for curious makers and independent builders.</p><div class="dashboard-subject-grid" id="dashboardSubjects"></div></section>
+      <div class="dashboard-note"><span class="tag">PREVIEW MODE</span><p>Subject areas are examples. Course schedules and enrollment are not connected yet.</p></div>
+    </main>
+  </div>
+  <footer class="auth-footer"><span>© 2026 Stackly Studio</span><a href="index.html">Back to Stackly</a></footer>
+  <script src="dashboard.js"></script>
+<script src="loader.js"></script></body>
+</html>

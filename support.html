@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0a">
+  <meta name="description" content="Help and support for your Stackly workspace.">
+  <title>Help & Support — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page" data-dashboard-page="support"><div class="site-loader" id="siteLoader" role="status" aria-label="Loading Stackly Studio"><img src="stackly-logo-lime.webp" alt="Stackly"><span class="site-loader-spinner" aria-hidden="true"></span><span class="site-loader-label">LOADING STACKLY</span></div>
+  <header class="dashboard-header"><div class="wrap dashboard-nav">
+    <a class="brand" href="index.html" aria-label="Stackly home"><img class="stackly-logo" src="stackly-logo-lime.webp" alt="Stackly"></a>
+    <div class="dashboard-user"><span class="dashboard-role-pill" id="dashboardRole">Workspace</span><span class="dashboard-email" id="dashboardEmail"></span><span class="dashboard-avatar" id="dashboardAvatar">S</span><button id="logoutButton" type="button">Log out <span>↗</span></button></div>
+  </div></header>
+  <div class="wrap dashboard-layout">
+    <aside class="dashboard-sidebar"><span class="dashboard-sidebar-label">WORKSPACE</span><nav aria-label="Dashboard navigation">
+      <a href="dashboard.html"><span>◫</span>Overview</a>
+      <a href="my-workspace.html"><span>▤</span>My workspace</a>
+      <a href="subjects.html"><span>⌘</span>Subjects</a>
+      <a class="active" href="support.html"><span>↗</span>Help & support</a>
+    </nav><div class="dashboard-sidebar-bottom"><span class="dashboard-status-dot"></span><span>STACKLY PREVIEW</span></div></aside>
+    <main class="dashboard-main support-page-main">
+      <section class="dashboard-welcome"><div><div class="eyebrow">STACKLY SUPPORT</div><h1 id="dashboardTitle">How can we help?</h1><p id="dashboardSubtitle">Find a quick answer or get in touch with our team.</p></div><a class="button dashboard-welcome-action" href="mailto:hello@stackly.studio">Email support <span>↗</span></a></section>
+      <section class="support-banner"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?fm=webp&fit=crop&w=700&q=40" alt="Team members working together in a studio"><div class="support-banner-overlay"></div><div><span class="tag">HERE TO HELP</span><h2>Good support starts with a clear conversation.</h2><p>Tell us what you are trying to do and where you got stuck.</p></div></section>
+      <section class="support-topics"><div class="dashboard-section-heading"><div><div class="eyebrow">Support topics</div><h2>Choose a place to start.</h2></div></div><div class="support-topic-grid">
+        <article><span>01 / ACCOUNT</span><h3>Access & sign in</h3><p>Need help with account access or choosing the right workspace role?</p><a href="mailto:hello@stackly.studio?subject=Stackly%20account%20support">Contact account support <b>↗</b></a></article>
+        <article><span>02 / LEARNING</span><h3>Classes & subjects</h3><p>Questions about course areas, class formats, or getting started?</p><a href="mailto:hello@stackly.studio?subject=Stackly%20learning%20support">Ask about learning <b>↗</b></a></article>
+        <article><span>03 / TEACHING</span><h3>Instructor support</h3><p>Planning a class or looking for help shaping a course idea?</p><a href="mailto:hello@stackly.studio?subject=Stackly%20instructor%20support">Talk with our team <b>↗</b></a></article>
+      </div></section>
+      <section class="support-faq"><div class="dashboard-section-heading"><div><div class="eyebrow">Frequently asked</div><h2>Quick answers.</h2></div></div>
+        <details><summary>How do I get into my workspace?</summary><p>Use the Log in page, choose Student or Instructor, and continue to the matching workspace preview. Secure account sign-in is not connected yet.</p></details>
+        <details><summary>Where will my classes and courses appear?</summary><p>Students will find learning progress in My workspace. Instructors will find course information there. These pages currently show sample content while the account system is being prepared.</p></details>
+        <details><summary>How do I ask about a class or course?</summary><p>Email us with the subject area you are interested in and what you hope to learn or teach. A rough idea is enough to begin.</p></details>
+      </section>
+      <section class="support-contact"><div><div class="eyebrow">Still need a hand?</div><h2>We’re one message away.</h2><p>Write to our team and include a little context so we can point you in the right direction.</p></div><a class="button" href="mailto:hello@stackly.studio">hello@stackly.studio <span>↗</span></a></section>
+    </main>
+  </div>
+  <footer class="auth-footer"><span>© 2026 Stackly Studio</span><a href="index.html">Back to Stackly</a></footer>
+  <script src="dashboard.js"></script>
+<script src="loader.js"></script></body>
+</html>

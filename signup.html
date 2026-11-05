@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0a">
+  <meta name="description" content="Create a Stackly Studio account.">
+  <title>Sign Up — Stackly Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page signup-page"><div class="site-loader" id="siteLoader" role="status" aria-label="Loading Stackly Studio"><img src="stackly-logo-lime.webp" alt="Stackly"><span class="site-loader-spinner" aria-hidden="true"></span><span class="site-loader-label">LOADING STACKLY</span></div>
+  <main class="auth-main">
+    <div class="auth-shell">
+      <section class="auth-art" aria-label="Stackly studio">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?fm=webp&fit=crop&w=700&q=40" alt="Studio team member working on a technology prototype">
+        <div class="auth-art-shade"></div>
+        <div class="auth-art-copy">
+          <span class="auth-kicker">STACKLY STUDIO · YOUR WORKSPACE</span>
+          <h1>Make room<br>for your next<br><span>good idea.</span></h1>
+          <p>Create a space to learn, teach, and move useful ideas forward.</p>
+        </div>
+        <span class="auth-art-index">STUDIO / 01</span>
+      </section>
+      <section class="auth-panel" aria-labelledby="signupTitle">
+        <div class="auth-form-wrap">
+          <a class="brand auth-form-brand" href="index.html"><img class="stackly-logo" src="stackly-logo-lime.webp" alt="Stackly"></a>
+          <a class="login-home-link" href="index.html">← Back to home</a>
+          <div class="eyebrow">Create your account</div>
+          <h2 id="signupTitle">Set up your workspace.</h2>
+          <p class="auth-intro">A few details are all you need to get started with Stackly.</p>
+          <form class="auth-form" id="signupForm" data-auth-validation novalidate>
+            <div class="field">
+              <label for="signupName">Name</label>
+              <input id="signupName" name="name" type="text" data-validate="name" placeholder="Jane Smith" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="signupEmail">Email address</label>
+              <input id="signupEmail" name="email" type="email" data-validate="email" placeholder="you@company.com" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="signupPassword">Password</label>
+              <div class="password-wrap"><input id="signupPassword" name="password" type="password" data-validate="password" placeholder="Create a password" autocomplete="new-password" required><button class="password-toggle" type="button" data-toggle-password="signupPassword" aria-label="Show password">Show</button></div>
+              <small class="signup-password-help">Use 8+ characters with uppercase, lowercase, a number, and a special character.</small>
+            </div>
+            <div class="field">
+              <label for="confirmPassword">Confirm password</label>
+              <div class="password-wrap"><input id="confirmPassword" name="confirmPassword" type="password" data-validate="confirm-password" placeholder="Enter your password again" autocomplete="new-password" required><button class="password-toggle" type="button" data-toggle-password="confirmPassword" aria-label="Show password">Show</button></div>
+            </div>
+            <button class="button auth-submit" type="submit">Create your account <span>↗</span></button>
+            <p class="auth-status" id="signupStatus" role="status" aria-live="polite"></p>
+          </form>
+          <div class="auth-help"><span>ALREADY HAVE AN ACCOUNT?</span><a href="login.html">Log in <b>→</b></a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="auth-validation.js"></script>
+  <script>
+    document.querySelectorAll('[data-toggle-password]').forEach(button => {
+      button.addEventListener('click', event => {
+        const field = document.getElementById(event.currentTarget.dataset.togglePassword);
+        const visible = field.type === 'password';
+        field.type = visible ? 'text' : 'password';
+        event.currentTarget.textContent = visible ? 'Hide' : 'Show';
+        event.currentTarget.setAttribute('aria-label', visible ? 'Hide password' : 'Show password');
+      });
+    });
+    document.getElementById('signupForm').addEventListener('submit', event => {
+      event.preventDefault();
+      sessionStorage.setItem('stacklySignupNotice', 'Your details are complete. Log in to continue.');
+      window.location.href = 'login.html';
+    });
+  </script>
+<script src="loader.js"></script></body>
+</html>

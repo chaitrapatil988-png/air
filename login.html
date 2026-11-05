@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0a">
+  <meta name="description" content="Log in to Stackly Studio.">
+  <title>Log in — Stackly Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page"><div class="site-loader" id="siteLoader" role="status" aria-label="Loading Stackly Studio"><img src="stackly-logo-lime.webp" alt="Stackly"><span class="site-loader-spinner" aria-hidden="true"></span><span class="site-loader-label">LOADING STACKLY</span></div>
+  <main class="auth-main">
+    <div class="auth-shell">
+      <section class="auth-art" aria-label="Stackly studio">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?fm=webp&fit=crop&w=700&q=40" alt="Studio team member working on a technology prototype">
+        <div class="auth-art-shade"></div>
+        <div class="auth-art-copy">
+          <span class="auth-kicker">STACKLY STUDIO · MEMBER ACCESS</span>
+          <h1>Good work<br>starts with<br><span>good questions.</span></h1>
+          <p>A thoughtful space for people building what comes next.</p>
+        </div>
+        <span class="auth-art-index">STUDIO / 01</span>
+      </section>
+      <section class="auth-panel" aria-labelledby="loginTitle">
+        <div class="auth-form-wrap">
+          <a class="brand auth-form-brand" href="index.html"><img class="stackly-logo" src="stackly-logo-lime.webp" alt="Stackly"></a>
+          <a class="login-home-link" href="index.html">← Back to home</a>
+          <div class="eyebrow">Member sign in</div>
+          <h2 id="loginTitle">Welcome back.</h2>
+          <p class="auth-intro">Choose your role to continue to your Stackly workspace.</p>
+          <form class="auth-form" id="loginForm" data-auth-validation novalidate>
+            <fieldset class="role-picker">
+              <legend>Your role</legend>
+              <label class="role-option"><input type="radio" name="role" value="student" checked required><span class="role-mark">S</span><span><strong>Student</strong><small>Learn and track progress</small></span></label>
+              <label class="role-option"><input type="radio" name="role" value="instructor" required><span class="role-mark">I</span><span><strong>Instructor</strong><small>Teach and manage courses</small></span></label>
+            </fieldset>
+            <div class="field">
+              <label for="loginEmail">Email address</label>
+              <input id="loginEmail" name="email" type="email" data-validate="email" placeholder="you@company.com" autocomplete="username" required>
+            </div>
+            <div class="field">
+              <div class="auth-password-label"><label for="loginPassword">Password</label><a href="404.html">Forgot password?</a></div>
+              <div class="password-wrap"><input id="loginPassword" name="password" type="password" data-validate="password" placeholder="Enter your password" autocomplete="current-password" required><button class="password-toggle" type="button" id="togglePassword" aria-label="Show password">Show</button></div>
+            </div>
+            <label class="remember-row"><input type="checkbox" name="remember" required><span>Remember me on this device</span></label>
+            <button class="button auth-submit" type="submit">Log in <span>↗</span></button>
+            <p class="auth-status" id="loginStatus" role="status" aria-live="polite"></p>
+          </form>
+          <div class="social-auth" aria-label="Other sign-in options">
+            <div class="social-auth-divider"><span>OR CONTINUE WITH</span></div>
+            <div class="social-auth-options">
+              <a class="social-auth-button" href="404.html" aria-label="Continue with Google">
+                <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M43.6 24.5c0-1.4-.1-2.8-.4-4.1H24v7.8h11a9.4 9.4 0 0 1-4.1 6.2v5h6.7c3.9-3.6 6-8.9 6-14.9Z"/><path fill="#34A853" d="M24 44c5.4 0 9.9-1.8 13.2-4.8l-6.7-5c-1.8 1.2-4 2-6.5 2-5.1 0-9.4-3.4-11-8H6.1v5.2A20 20 0 0 0 24 44Z"/><path fill="#FBBC05" d="M13 28.2a12 12 0 0 1 0-8.4v-5.2H6.1a20 20 0 0 0 0 18.8l6.9-5.2Z"/><path fill="#EA4335" d="M24 11.8c2.9 0 5.5 1 7.6 3l5.7-5.7C33.9 5.8 29.4 4 24 4A20 20 0 0 0 6.1 14.6l6.9 5.2c1.6-4.6 5.9-8 11-8Z"/></svg>
+                <span>Google</span>
+              </a>
+              <a class="social-auth-button" href="404.html" aria-label="Continue with Microsoft">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f25022" d="M1 1h10v10H1z"/><path fill="#7fba00" d="M13 1h10v10H13z"/><path fill="#00a4ef" d="M1 13h10v10H1z"/><path fill="#ffb900" d="M13 13h10v10H13z"/></svg>
+                <span>Microsoft</span>
+              </a>
+            </div>
+          </div>
+          <div class="auth-help"><span>NEW TO STACKLY?</span><a href="signup.html">Let’s talk <b>→</b></a></div>
+          
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="auth-validation.js"></script>
+  <script>
+    const signupNotice = sessionStorage.getItem('stacklySignupNotice');
+    if (signupNotice) {
+      document.getElementById('loginStatus').textContent = signupNotice;
+      sessionStorage.removeItem('stacklySignupNotice');
+    }
+    const passwordField = document.getElementById('loginPassword');
+    document.getElementById('togglePassword').addEventListener('click', event => {
+      const visible = passwordField.type === 'password';
+      passwordField.type = visible ? 'text' : 'password';
+      event.currentTarget.textContent = visible ? 'Hide' : 'Show';
+      event.currentTarget.setAttribute('aria-label', visible ? 'Hide password' : 'Show password');
+    });
+    document.getElementById('loginForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const role = new FormData(form).get('role');
+      const email = document.getElementById('loginEmail').value.trim();
+      sessionStorage.setItem('stacklyRole', role);
+      sessionStorage.setItem('stacklyEmail', email);
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+<script src="loader.js"></script></body>
+</html>

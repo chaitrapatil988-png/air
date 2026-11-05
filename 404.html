@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>404 — Page not found | Stackly Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error-page{min-height:100vh;display:grid;place-items:center;padding:32px;text-align:center;background:linear-gradient(90deg,#090b09ed 0%,#090b09cf 48%,#090b09a8 100%),url("https://images.unsplash.com/photo-1485827404703-89b55fcc595e?fm=webp&fit=crop&w=700&q=40") center/cover no-repeat}
+    .error-content{max-width:620px}.error-code{color:var(--lime);font:12px var(--mono);letter-spacing:.18em}.error-content h1{font-size:clamp(64px,12vw,112px);line-height:.9;letter-spacing:-.09em;margin:22px 0}.error-content p{max-width:420px;margin:0 auto 28px;color:var(--muted);font-size:14px;line-height:1.8}.error-content a{display:inline-block;color:var(--lime);font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}.error-content button{display:block;margin:0 auto 18px;padding:12px 17px;background:var(--lime);color:#10120c;border:0;border-radius:2px;font:700 11px var(--sans);cursor:pointer}.error-content button:hover{background:#dcff91}
+  </style>
+</head>
+<body><div class="site-loader" id="siteLoader" role="status" aria-label="Loading Stackly Studio"><img src="stackly-logo-lime.webp" alt="Stackly"><span class="site-loader-spinner" aria-hidden="true"></span><span class="site-loader-label">LOADING STACKLY</span></div>
+  <main class="error-page">
+    <div class="error-content">
+      <span class="error-code">ERROR / 404</span>
+      <h1>Page not found.</h1>
+      <p>This page may have moved, or the link may not be available yet.</p>
+      <button type="button" onclick="if(history.length>1){history.back()}else{location.href='index.html'}">← Previous page</button>
+      <a href="index.html">← Return to home</a>
+    </div>
+  </main>
+<script src="loader.js"></script></body>
+</html>

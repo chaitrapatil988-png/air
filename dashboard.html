@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0a">
+  <meta name="description" content="Your Stackly workspace overview.">
+  <title>Overview — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page" data-dashboard-page="overview"><div class="site-loader" id="siteLoader" role="status" aria-label="Loading Stackly Studio"><img src="stackly-logo-lime.webp" alt="Stackly"><span class="site-loader-spinner" aria-hidden="true"></span><span class="site-loader-label">LOADING STACKLY</span></div>
+  <header class="dashboard-header"><div class="wrap dashboard-nav">
+    <a class="brand" href="index.html" aria-label="Stackly home"><img class="stackly-logo" src="stackly-logo-lime.webp" alt="Stackly"></a>
+    <div class="dashboard-user"><span class="dashboard-role-pill" id="dashboardRole">Workspace</span><span class="dashboard-email" id="dashboardEmail"></span><span class="dashboard-avatar" id="dashboardAvatar">S</span><button id="logoutButton" type="button">Log out <span>↗</span></button></div>
+  </div></header>
+  <div class="wrap dashboard-layout">
+    <aside class="dashboard-sidebar"><span class="dashboard-sidebar-label">WORKSPACE</span><nav aria-label="Dashboard navigation">
+      <a class="active" href="dashboard.html"><span>◫</span>Overview</a>
+      <a href="my-workspace.html"><span>▤</span>My workspace</a>
+      <a href="subjects.html"><span>⌘</span>Subjects</a>
+      <a href="support.html"><span>↗</span>Help & support</a>
+    </nav><div class="dashboard-sidebar-bottom"><span class="dashboard-status-dot"></span><span>STACKLY PREVIEW</span></div></aside>
+    <main class="dashboard-main">
+      <section class="dashboard-welcome"><div><div class="eyebrow" id="dashboardEyebrow">Your workspace</div><h1 id="dashboardTitle">Welcome back.</h1><p id="dashboardSubtitle">Your Stackly workspace is ready.</p></div><a class="button dashboard-welcome-action" id="dashboardAction" href="subjects.html">Explore subjects <span>↗</span></a></section>
+      <section class="dashboard-banner"><img id="dashboardBannerImage" src="" alt=""><div class="dashboard-banner-overlay"></div><div class="dashboard-banner-copy"><span class="tag" id="dashboardBannerTag">YOUR STACKLY SPACE</span><h2 id="dashboardBannerTitle">Make learning part of what you do.</h2><p id="dashboardBannerCopy">Build new skills with small, practical steps.</p></div><span class="dashboard-banner-index">SAMPLE OVERVIEW</span></section>
+      <section class="dashboard-summary" id="dashboardSummary" aria-label="Workspace summary"></section>
+      <section class="dashboard-plan"><div class="dashboard-section-heading"><div><div class="eyebrow">A little structure goes a long way</div><h2 id="planTitle">Your focus for the week.</h2></div><span class="dashboard-updated">SAMPLE PLAN</span></div><div class="dashboard-plan-grid" id="dashboardPlan"></div></section>
+      <div class="dashboard-body-grid">
+        <section class="dashboard-primary"><div class="dashboard-section-heading"><div><div class="eyebrow">Recent activity</div><h2 id="activityTitle">Keep your momentum.</h2></div><span class="dashboard-updated">SAMPLE DATA</span></div><div class="dashboard-activity activity-list" id="dashboardActivity"></div></section>
+        <aside class="dashboard-side-panel"><div class="dashboard-side-heading"><div class="eyebrow">Quick links</div><h2>Keep moving.</h2></div><div id="dashboardQuickLinks" class="dashboard-quick-links"></div><div class="dashboard-tip"><span class="tag">A GOOD NEXT STEP</span><p id="dashboardTip">Start with one small goal.</p></div></aside>
+      </div>
+      <div class="dashboard-note"><span class="tag">PREVIEW MODE</span><p>This overview uses sample figures and activity. Secure sign-in and live account data are not connected yet.</p></div>
+    </main>
+  </div>
+  <footer class="auth-footer"><span>© 2026 Stackly Studio</span><a href="index.html">Back to Stackly</a></footer>
+  <script src="dashboard.js"></script>
+<script src="loader.js"></script></body>
+</html>

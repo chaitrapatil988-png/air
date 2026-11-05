@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0a">
+  <meta name="description" content="Your Stackly courses and learning progress.">
+  <title>My workspace — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page" data-dashboard-page="workspace"><div class="site-loader" id="siteLoader" role="status" aria-label="Loading Stackly Studio"><img src="stackly-logo-lime.webp" alt="Stackly"><span class="site-loader-spinner" aria-hidden="true"></span><span class="site-loader-label">LOADING STACKLY</span></div>
+  <header class="dashboard-header"><div class="wrap dashboard-nav">
+    <a class="brand" href="index.html" aria-label="Stackly home"><img class="stackly-logo" src="stackly-logo-lime.webp" alt="Stackly"></a>
+    <div class="dashboard-user"><span class="dashboard-role-pill" id="dashboardRole">Workspace</span><span class="dashboard-email" id="dashboardEmail"></span><span class="dashboard-avatar" id="dashboardAvatar">S</span><button id="logoutButton" type="button">Log out <span>↗</span></button></div>
+  </div></header>
+  <div class="wrap dashboard-layout">
+    <aside class="dashboard-sidebar"><span class="dashboard-sidebar-label">WORKSPACE</span><nav aria-label="Dashboard navigation">
+      <a href="dashboard.html"><span>◫</span>Overview</a>
+      <a class="active" href="my-workspace.html"><span>▤</span>My workspace</a>
+      <a href="subjects.html"><span>⌘</span>Subjects</a>
+      <a href="support.html"><span>↗</span>Help & support</a>
+    </nav><div class="dashboard-sidebar-bottom"><span class="dashboard-status-dot"></span><span>STACKLY PREVIEW</span></div></aside>
+    <main class="dashboard-main">
+      <section class="dashboard-welcome"><div><div class="eyebrow" id="dashboardEyebrow">MY WORKSPACE</div><h1 id="dashboardTitle">Your workspace.</h1><p id="dashboardSubtitle">Your courses and progress, in one place.</p></div><a class="button dashboard-welcome-action" id="dashboardAction" href="contact.html">Talk to Stackly <span>↗</span></a></section>
+      <section class="dashboard-summary" id="dashboardSummary" aria-label="Workspace summary"></section>
+      <section class="dashboard-primary workspace-page-primary">
+        <div class="dashboard-section-heading"><div><div class="eyebrow" id="workspaceEyebrow">Your activity</div><h2 id="dashboardSectionTitle">Continue where you left off.</h2></div><span class="dashboard-updated">SAMPLE DATA</span></div>
+        <div class="dashboard-workspace is-populated" id="dashboardWorkspace"></div>
+        <div class="workspace-milestones"><div class="activity-heading"><div><div class="eyebrow">Next milestones</div><h3 id="milestoneTitle">Small steps, steady progress.</h3></div><span>SAMPLE PLAN</span></div><div class="milestone-grid" id="dashboardMilestones"></div></div>
+        <div class="dashboard-activity"><div class="activity-heading"><div><div class="eyebrow">Recent activity</div><h3 id="activityTitle">Recent updates.</h3></div><span>SAMPLE DATA</span></div><div class="activity-list" id="dashboardActivity"></div></div>
+      </section>
+      <div class="dashboard-note"><span class="tag">PREVIEW MODE</span><p>Courses, progress, and activity shown here are examples. Live account and course data are not connected yet.</p></div>
+    </main>
+  </div>
+  <footer class="auth-footer"><span>© 2026 Stackly Studio</span><a href="index.html">Back to Stackly</a></footer>
+  <script src="dashboard.js"></script>
+<script src="loader.js"></script></body>
+</html>
